@@ -1,0 +1,12 @@
+
+To mp4: 
+ffmpeg -i output.avi -vcodec mpeg4 -b:v 1200k -flags +aic+mv4 output.mp4
+
+To ogg:
+ffmpeg -i output.avi -acodec libvorbis -ac 1 -b:v 1200k output.ogg
+
+To swf:
+ffmpeg -i output.avi -acodec copy -q:v .1 -vcodec flv output.swf
+
+pdf to jpg/png
+convert -density 300 a.pdf a.png
